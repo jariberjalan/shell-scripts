@@ -8,6 +8,6 @@
 ## Beginner Guide
 
 - Install dependency.
-- Copy data [cssh](https://github.com/jariberjalan/shell-scripts/tree/main/auto-connect-ssh) and add server, password and port.
-- Change permission to 755.
-- Run as `./cssh` or move to `/bin` or `/usr/bin` for access `cssh`.
+- Copy data [cssh](https://github.com/jariberjalan/shell-scripts/tree/main/auto-connect-ssh) to local and modify `server, password and port`
+- Change permission `chmod cssh 755`
+- Run as `./cssh` or move to `/bin` or `/usr/bin` for access `cssh`
