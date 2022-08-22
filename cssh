@@ -1,0 +1,19 @@
+#!/bin/bash
+server="user@example.com"
+password="input_password_here"
+port="port_ssh"
+chiper="Ciphers=chacha20-poly1305@openssh.com" 
+keax="KexAlgorithms=curve25519-sha256@libssh.org" 
+macs="MACs=hmac-sha2-256-etm@openssh.com"
+hka="HostKeyAlgorithms=ssh-ed25519"
+while :; do
+    clear
+    echo "Connected to SSH Tunnel"
+    echo "[*] SSH Port ${port}"
+    echo "[*] SOCKS Port 1080"
+    if [[ -f .sshknow ]]; then rm .sshknow; fi
+    if [[ -f $HOME/sshconnection.log ]]; then rm $HOME/sshconnection.log; fi
+    sshpass -p "$password" ssh -2 -4 -o StrictHostKeyChecking=no -o ForwardX11=no -o ForwardX11Trusted=no -o ForwardAgent=no -o UserKnownHostsFile=/dev/null -o GlobalKnownHostsFile=no -o HashKnownHosts=no -o TCPKeepAlive=yes -o VerifyHostKeyDNS=no -o GatewayPorts=no -o XAuthLocation=no -o TCPKeepAlive=yes -o Compression=yes -o $chiper -o $keax -o $macs -o $hka -E $HOME/sshconnection.log -aCkNTxqvv -p "$port" -D 127.0.0.1:1080 "$server"
+    echo -ne "SSH connection exited, wait before re-trying..."
+    sleep 1
+done
