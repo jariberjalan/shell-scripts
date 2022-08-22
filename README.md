@@ -1,13 +1,13 @@
-# What is cssh?
-cssh is simple script for access SSH with auto connect via SOCKS5 Proxy on termux or linux terminal. cssh build with high security for any 'free ssh account'.
+# what cssh file in auto-connect-ssh?
+[cssh](https://github.com/jariberjalan/shell-scripts/tree/main/auto-connect-ssh) is simple script for access SSH with auto-connect after terminated and access SSH via SOCKS5 Proxy. [cssh](https://github.com/jariberjalan/shell-scripts/tree/main/auto-connect-ssh) build with high security for any 'free ssh account'.
 
 ## Dependency
 - [openssh](https://directory.fsf.org/wiki/OpenSSH)
 - [sshpass](https://directory.fsf.org/wiki/Sshpass)
 
-# Beginner Guide
+## Beginner Guide
 
 - Install dependency.
-- Copy data cssh and add server, password and port.
+- Copy data [cssh](https://github.com/jariberjalan/shell-scripts/tree/main/auto-connect-ssh) and add server, password and port.
 - Change permission to 755.
 - Run as `./cssh` or move to `/bin` or `/usr/bin` for access `cssh`.
