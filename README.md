@@ -9,5 +9,5 @@
 
 - Install dependency.
 - Copy data [cssh](https://github.com/jariberjalan/shell-scripts/tree/main/auto-connect-ssh) to local and modify `server, password and port`
-- Change permission `chmod cssh 755`
+- Change permission `chmod 755 cssh`
 - Run as `./cssh` or move to `/bin` or `/usr/bin` for access `cssh`
